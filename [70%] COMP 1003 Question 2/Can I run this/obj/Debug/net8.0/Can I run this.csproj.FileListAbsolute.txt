@@ -1,0 +1,15 @@
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\bin\Debug\net8.0\Can I run this.exe
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\bin\Debug\net8.0\Can I run this.deps.json
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\bin\Debug\net8.0\Can I run this.runtimeconfig.json
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\bin\Debug\net8.0\Can I run this.dll
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\bin\Debug\net8.0\Can I run this.pdb
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.AssemblyInfoInputs.cache
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.AssemblyInfo.cs
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.csproj.CoreCompileInputs.cache
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.sourcelink.json
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.dll
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\refint\Can I run this.dll
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.pdb
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\Can I run this.genruntimeconfig.cache
+C:\Users\jasan\[01] Javier\[03] University of Plymouth\[04] GitHub Repos\[01] Year 1\COMP-1003-Coursework\[70%] COMP 1003 Question 2\Can I run this\obj\Debug\net8.0\ref\Can I run this.dll
