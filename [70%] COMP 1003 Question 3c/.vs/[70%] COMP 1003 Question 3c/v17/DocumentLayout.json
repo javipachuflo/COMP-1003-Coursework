@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jasan\\[01] Javier\\[03] University of Plymouth\\[04] GitHub Repos\\[01] Year 1\\COMP-1003-Coursework\\[70%] COMP 1003 Question 3c\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D771A19-474C-4BB6-9DB5-6D4E427C93C4}|[70%] COMP 1003 Question 3c\\[70%] COMP 1003 Question 3c.csproj|c:\\users\\jasan\\[01] javier\\[03] university of plymouth\\[04] github repos\\[01] year 1\\comp-1003-coursework\\[70%] comp 1003 question 3c\\[70%] comp 1003 question 3c\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D771A19-474C-4BB6-9DB5-6D4E427C93C4}|[70%] COMP 1003 Question 3c\\[70%] COMP 1003 Question 3c.csproj|solutionrelative:[70%] comp 1003 question 3c\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jasan\\[01] Javier\\[03] University of Plymouth\\[04] GitHub Repos\\[01] Year 1\\COMP-1003-Coursework\\[70%] COMP 1003 Question 3c\\[70%] COMP 1003 Question 3c\\Program.cs",
+              "RelativeDocumentMoniker": "[70%] COMP 1003 Question 3c\\Program.cs",
+              "ToolTip": "C:\\Users\\jasan\\[01] Javier\\[03] University of Plymouth\\[04] GitHub Repos\\[01] Year 1\\COMP-1003-Coursework\\[70%] COMP 1003 Question 3c\\[70%] COMP 1003 Question 3c\\Program.cs",
+              "RelativeToolTip": "[70%] COMP 1003 Question 3c\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T20:35:49.594Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
