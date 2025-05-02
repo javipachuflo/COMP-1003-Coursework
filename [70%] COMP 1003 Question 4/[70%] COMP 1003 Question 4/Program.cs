@@ -1,5 +1,5 @@
-
-using System;   // Don't use anything else than System and only use C-core functionality; read the specs!
+using System;
+using System.Runtime.InteropServices;   // Don't use anything else than System and only use C-core functionality; read the specs!
 
 /// <summary>
 /// Implement a binary search tree 
@@ -58,6 +58,7 @@ class Program
     /// Your methods go here  .... (and nowhere else)
 
 
+
     /// THAT LINE: If you want to add methods add them between THIS LINE and THAT LINE
 
 
@@ -111,13 +112,15 @@ class Program
     /// <returns>True if two Nodes have the same value, false otherwise.</returns>
     static bool IsEqual(Node item1, Node item2)
     {
-        if (item1 == item2)
+        if (item1.data.data == item2.data.data)
         {
             return true;
+            Console.WriteLine($"{item1} is the same as {item2}");
         }
         else
         {
             return false; // you can replace this statement; it is here because the stub code wouldn't run without it
+            Console.WriteLine($"{item1} is NOT the same as {item2}");
 
         }
 
@@ -163,7 +166,8 @@ class Program
     /// <param name="item">The Node to insert</param>
     static void InsertTree(Tree tree, Node item)
     {
-          // ...
+        tree = new Tree();
+        item = tree.root;
     }
 
 
@@ -179,7 +183,26 @@ class Program
     {
         //  Fill in proper code 
 
-        return false; // replace?
+        //is the value of the node inputted the same as the value of the node we want
+        //if yes, found
+        //if not, if the value of the current node is bigger than the desired value, go left, if it's smaller, go right.
+
+        if (tree.data.data == value.data)
+        {
+            return true;
+
+        } else if (value.data < tree.data.data)
+        {
+             return SearchTree(tree.left, value);
+
+        } else if (value.data > tree.data.data)
+        {
+            return SearchTree(tree.right, value);
+
+        } else {
+            return false;
+        }
+
     }
 
 
@@ -195,7 +218,18 @@ class Program
     {
         //  Fill in proper code 
 
-        return false; // replace?
+        if (IsEqual(tree, item)){
+            return true;
+
+        } else if (item.data.data < tree.data.data) {
+            return SearchTreeItem(tree.left, item);
+
+        } else if (item.data.data > tree.data.data) {
+            return SearchTreeItem(tree.right, item);
+
+        } else {
+            return false;
+        }
     }
 
 
@@ -396,15 +430,28 @@ class Program
 
     }
 
+    
 
-    /// <summary>
-    /// The Main entry point into the code. Don't change anythhing here. 
-    /// </summary>
-    static void Main()
+/// <summary>
+/// The Main entry point into the code. Don't change anythhing here. 
+/// </summary>
+static void Main()
     {
         TreeTests();
 
         SetTests();
+
+
+        DataEntry data1 = new DataEntry();
+        data1.data = 4;
+
+        Console.WriteLine($"the value of {nameof(data1)} is {data1.data}");
+
+        Tree theTree = new Tree();
+        theTree.root.data.data = 5;
+
+        Console.WriteLine($"the value of {nameof(theTree)} is {theTree.root.data.data}");
+
     }
 
 }
