@@ -56,8 +56,23 @@ class Program
 
 
     /// Your methods go here  .... (and nowhere else)
+    /// 
+    static Node SearchTreeItemReturn_item(Node tree, Node item) {
+        //  Fill in proper code 
 
+        if (IsEqual(tree, item)) {
+            return item;
 
+        } else if (item.data.data < tree.data.data) {
+            return SearchTreeItemReturn_item(tree.left, item);
+
+        } else if (item.data.data > tree.data.data) {
+            return SearchTreeItemReturn_item(tree.right, item);
+
+        } else {
+            return null;
+        }
+    }
 
     /// THAT LINE: If you want to add methods add them between THIS LINE and THAT LINE
 
@@ -241,6 +256,11 @@ class Program
     static void DeleteItem(Tree tree, Node item)
     {
         //  Fill in proper code 
+
+        //access the root, find the node through the value
+
+        Node foundItem = SearchTreeItemReturn_item(tree.root, item);
+        foundItem = null;
     }
 
 
@@ -450,6 +470,8 @@ static void Main()
         Tree theTree = new Tree();
         theTree.root.data.data = 5;
 
+        Node node1 = new Node();
+        
         Console.WriteLine($"the value of {nameof(theTree)} is {theTree.root.data.data}");
 
     }
