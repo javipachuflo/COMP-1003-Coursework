@@ -1,37 +1,41 @@
 ﻿namespace Can_I_run_this
 {
-    internal class Program
+    
+    public class Map<K, V>
     {
-        static void Main(string[] args)
+        Map<string, int> employees = new Map<string, int>;
+        
+        employees.put("Homer", 20000);
+        employees.put("Monty", 500000);
+
+        employees.remove("Homer");
+
+
+        
+        public void clear() 
+        { 
+            
+        }
+
+        public void put(K Homer, V 20000);
+        
+
+        public void remove(K k)
         {
-            // (i)
-            Dictionary<string, int> employees = new Dictionary<string, int>();
-
-            // (ii)
-            employees.Add("Homer", 20000);
-            employees.Add("Monty", 500000);
-
-            // (iii)
-            employees.Remove("Homer");
-
-            // (iv)
-            if (employees.TryGetValue("Carl", out int Carl_pay))
-            {
-                employees["Carl"] = Carl_pay - 1000;
-            }
-            else
-            {
-                employees.Add("Carl", -1000);
-            }
-
-            // (v)
-            foreach (var key in employees.Keys)
-            {
-                employees[key] = (int)(employees[key] * 1.01);
-                Console.WriteLine(employees[key]);
-
-            }
 
         }
+
+        public V get(K k) 
+        {
+
+            return default(V);
+        }
+
+        public HashSet<K> keyset()
+        {
+
+            return new HashSet<K>();
+        }
     }
+    
 }

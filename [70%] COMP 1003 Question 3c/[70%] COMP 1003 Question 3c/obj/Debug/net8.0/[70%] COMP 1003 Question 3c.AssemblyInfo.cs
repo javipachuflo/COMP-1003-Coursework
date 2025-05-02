@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("[70%] COMP 1003 Question 3c")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dcfcd4af395043c8af3fea23618ef2e7953bb65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+140fd818f412489f75401b0d05ea4631855b4eb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("[70%] COMP 1003 Question 3c")]
 [assembly: System.Reflection.AssemblyTitleAttribute("[70%] COMP 1003 Question 3c")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

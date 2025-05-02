@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int node_number = 7;
+            string[] visited = new string[node_number];
+            string[] unvisited = new string[node_number];
+
+
+
         }
     }
 }
