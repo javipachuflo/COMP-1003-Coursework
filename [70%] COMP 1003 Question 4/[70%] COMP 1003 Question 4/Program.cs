@@ -190,13 +190,10 @@ class Program
         if (item1.data.data == item2.data.data)
         {
             return true;
-            Console.WriteLine($"{item1} is the same as {item2}");
         }
         else
         {
             return false; // you can replace this statement; it is here because the stub code wouldn't run without it
-            Console.WriteLine($"{item1} is NOT the same as {item2}");
-
         }
 
     }
@@ -598,29 +595,6 @@ class Program
         TreeTests();
 
         SetTests();
-
-        Tree testTree = new Tree();
-
-        // Manually insert a few known values
-        for (int i = 1; i <= 5; i++)
-        {
-            DataEntry data = new DataEntry();
-            data.data = i;
-
-            Node node = new Node();
-            node.data = data;
-
-            InsertTree(testTree, node);
-        }
-
-        PrintTree(testTree.root);  // should print: 1 2 3 4 5
-        Console.WriteLine();
-        Console.WriteLine($"Total number of nodes = {CountNodes(testTree.root)}");  // should print: 5
-        Console.WriteLine();
-        Console.WriteLine($"Size of BST = {Size(testTree)}"); // should also print 5 in this case
-        Console.WriteLine();
-        Console.WriteLine($"Depth of BST = {Depth(testTree.root)}"); // should also print 5 in this case ñe >:)
-
     }
 
 }
