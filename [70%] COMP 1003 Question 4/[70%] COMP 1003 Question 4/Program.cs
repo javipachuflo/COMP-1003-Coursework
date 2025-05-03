@@ -63,47 +63,75 @@ class Program
     /// Search for a node by comparing values
     ///
     /// </summary>
-    static Node SearchTreeItemReturn_item(Node tree, Node item) {
+    static Node SearchTreeItemReturn_item(Node tree, Node item)
+    {
         //  Fill in proper code 
 
-        if (IsEqual(tree, item)) {
+        if (IsEqual(tree, item))
+        {
             return item;
 
-        } else if (item.data.data < tree.data.data) {
+        }
+        else if (item.data.data < tree.data.data)
+        {
             return SearchTreeItemReturn_item(tree.left, item);
 
-        } else if (item.data.data > tree.data.data) {
+        }
+        else if (item.data.data > tree.data.data)
+        {
             return SearchTreeItemReturn_item(tree.right, item);
 
-        } else {
+        }
+        else
+        {
             return null;
         }
     }
 
-    static int count = 0;
+    static Node SearchTreeItem_ReturnItem_StoreParent(Node this_node, Node item_to_find, Node parent)
+    {
+        //  Fill in proper code 
+
+        if (this_node == null)
+        {
+            return null;
+        }
+
+        if (IsEqual(this_node, item_to_find))
+        {
+            return parent;
+
+        }
+
+        if (item_to_find.data.data < this_node.data.data)
+        {
+            return SearchTreeItem_ReturnItem_StoreParent(this_node.left, item_to_find, this_node);
+
+        }
+        else if (item_to_find.data.data > this_node.data.data)
+        {
+            return SearchTreeItem_ReturnItem_StoreParent(this_node.right, item_to_find, this_node);
+
+        }
+        else
+        {
+            return null;
+        }
+    }
+
 
     /// <summary>
     /// Will count the amount of nodes in root node's tree
     /// </summary>
     /// <param name="tree">root node of the tree you want to count</param>
     /// <returns>count of Nodes in root node's tree</returns>
-    static int CountNodes(Node tree) {
-        if (tree == null) {
-            return -1;
-        }
+    static int CountNodes(Node tree)
+    {
+        if (tree == null)
+            return 0;
 
-        if (tree.left != null) {
-            count++;
-            CountNodes(tree.left);
-        }
-
-        if (tree.right != null)
-        {
-            count++;
-            CountNodes(tree.right);
-        }
-
-        return count;
+        // Count this node + left subtree + right subtree
+        return 1 + CountNodes(tree.left) + CountNodes(tree.right);
     }
 
     /// THAT LINE: If you want to add methods add them between THIS LINE and THAT LINE
@@ -243,15 +271,19 @@ class Program
         {
             return true;
 
-        } else if (value.data < tree.data.data)
+        }
+        else if (value.data < tree.data.data)
         {
-             return SearchTree(tree.left, value);
+            return SearchTree(tree.left, value);
 
-        } else if (value.data > tree.data.data)
+        }
+        else if (value.data > tree.data.data)
         {
             return SearchTree(tree.right, value);
 
-        } else {
+        }
+        else
+        {
             return false;
         }
 
@@ -270,16 +302,23 @@ class Program
     {
         //  Fill in proper code 
 
-        if (IsEqual(tree, item)){
+        if (IsEqual(tree, item))
+        {
             return true;
 
-        } else if (item.data.data < tree.data.data) {
+        }
+        else if (item.data.data < tree.data.data)
+        {
             return SearchTreeItem(tree.left, item);
 
-        } else if (item.data.data > tree.data.data) {
+        }
+        else if (item.data.data > tree.data.data)
+        {
             return SearchTreeItem(tree.right, item);
 
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
@@ -296,7 +335,7 @@ class Program
 
         //access the root, find the node through the value
 
-        Node foundItem = SearchTreeItemReturn_item(tree.root, item);
+        Node foundItem = SearchTreeItemReturn_item(tree.root, item); // "CTRL + F12" to see function quickly, then "CTRL + -"(minus) to go back
         foundItem = null;
     }
 
@@ -310,10 +349,9 @@ class Program
     {
         //  Fill in proper code 
 
-        // get root node of the tree, then search it. and count how many
+        // get root node of the tree, then search it as count how many
 
-
-        return 0;
+        return CountNodes(tree.root); // "CTRL + F12" to see function quickly, then "CTRL + -"(minus) to go back
     }
 
 
@@ -326,8 +364,17 @@ class Program
     /// <returns>The depth of the tree.</returns>
     static int Depth(Node tree)
     {
+        if (tree == null)
+        {
+            return 0;
 
-        return 0;
+        }
+
+        int leftDepth = Depth(tree.left);
+        int rightDepth = Depth(tree.right);
+
+        return 1 + Math.Max(leftDepth, rightDepth);
+
     }
 
 
@@ -339,10 +386,13 @@ class Program
     /// <returns>The parent of node in the tree, or null if node has no parent.</returns>
     static Node Parent(Tree tree, Node node)
     {
+        // first, search for the node
+        // meanwhile, while searcing for the node, pass the previous node as a parameter, so it is still accessible
+        // once node found, return the parameter node
 
-        return null;
+        return SearchTreeItem_ReturnItem_StoreParent(tree.root, node, null); // "CTRL + F12" to see function quickly, then "CTRL + -"(minus) to go back
+
     }
-
 
     /// <summary>
     /// Find the Node with maximum value in a (sub-)tree, given the IsSmaller predicate.
@@ -351,9 +401,56 @@ class Program
     /// <returns>The Node that contains the largest value in the sub-tree provided.</returns>
     static Node FindMax(Node tree)
     {
-        return null;
+        // check root node value and store it as max_value
+        // check next values, if one of the values is bigger than previous value, then this value becomes max_value
+
+        if (tree == null)
+        {
+            return null;
+        }
+
+        Node max_value = tree;
+
+        Node max_left = FindMax(tree.left);
+        Node max_right = FindMax(tree.right);
+
+        if (max_left != null && IsSmaller(max_value, max_left))
+        {
+            max_value = max_left;
+        }
+        
+        if (max_right != null && IsSmaller(max_value, max_right))
+        {
+            max_value = max_right;
+        }
+
+        return max_value;
     }
 
+    static Node FindMin(Node tree)
+    {
+        if (tree == null)
+        {
+            return null;
+        }
+
+        Node min_value = tree;
+
+        Node min_left = FindMin(tree.left);
+        Node min_right = FindMin(tree.right);
+
+        if (min_left != null && IsSmaller(min_left, min_value))
+        {
+            min_value = min_left;
+        }
+
+        if (min_right != null && IsSmaller(min_right, min_value))
+        {
+            min_value = min_right;
+        }
+
+        return min_value;
+    }
 
     /// <summary>
     /// Delete the Node with the smallest value from the Tree. 
@@ -361,7 +458,8 @@ class Program
     /// <param name="tree">The Tree to process.</param>
     static void DeleteMin(Tree tree)
     {
-
+        Node min_value = FindMin(tree.root);
+        min_value = null;
     }
 
 
@@ -490,21 +588,38 @@ class Program
 
     }
 
-    
 
-/// <summary>
-/// The Main entry point into the code. Don't change anythhing here. 
-/// </summary>
-static void Main()
+
+    /// <summary>
+    /// The Main entry point into the code. Don't change anythhing here. 
+    /// </summary>
+    static void Main()
     {
         TreeTests();
 
         SetTests();
 
-        Tree theTree = new Tree();
+        Tree testTree = new Tree();
 
+        // Manually insert a few known values
+        for (int i = 1; i <= 5; i++)
+        {
+            DataEntry data = new DataEntry();
+            data.data = i;
 
-        Console.WriteLine($"The count of nodes in a tree are{CountNodes(theTree.root)}");
+            Node node = new Node();
+            node.data = data;
+
+            InsertTree(testTree, node);
+        }
+
+        PrintTree(testTree.root);  // should print: 1 2 3 4 5
+        Console.WriteLine();
+        Console.WriteLine($"Total number of nodes = {CountNodes(testTree.root)}");  // should print: 5
+        Console.WriteLine();
+        Console.WriteLine($"Size of BST = {Size(testTree)}"); // should also print 5 in this case
+        Console.WriteLine();
+        Console.WriteLine($"Depth of BST = {Depth(testTree.root)}"); // should also print 5 in this case ñe >:)
 
     }
 
