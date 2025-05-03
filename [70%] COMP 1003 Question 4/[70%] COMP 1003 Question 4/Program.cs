@@ -57,6 +57,12 @@ class Program
 
     /// Your methods go here  .... (and nowhere else)
     /// 
+
+    /// <summary> 
+    ///
+    /// Search for a node by comparing values
+    ///
+    /// </summary>
     static Node SearchTreeItemReturn_item(Node tree, Node item) {
         //  Fill in proper code 
 
@@ -72,6 +78,32 @@ class Program
         } else {
             return null;
         }
+    }
+
+    static int count = 0;
+
+    /// <summary>
+    /// Will count the amount of nodes in root node's tree
+    /// </summary>
+    /// <param name="tree">root node of the tree you want to count</param>
+    /// <returns>count of Nodes in root node's tree</returns>
+    static int CountNodes(Node tree) {
+        if (tree == null) {
+            return -1;
+        }
+
+        if (tree.left != null) {
+            count++;
+            CountNodes(tree.left);
+        }
+
+        if (tree.right != null)
+        {
+            count++;
+            CountNodes(tree.right);
+        }
+
+        return count;
     }
 
     /// THAT LINE: If you want to add methods add them between THIS LINE and THAT LINE
@@ -181,8 +213,7 @@ class Program
     /// <param name="item">The Node to insert</param>
     static void InsertTree(Tree tree, Node item)
     {
-        tree = new Tree();
-        item = tree.root;
+        InsertItem(ref tree.root, item);
     }
 
 
@@ -198,9 +229,15 @@ class Program
     {
         //  Fill in proper code 
 
+        //check if anything is null, if yes return false, if not, continue
         //is the value of the node inputted the same as the value of the node we want
         //if yes, found
         //if not, if the value of the current node is bigger than the desired value, go left, if it's smaller, go right.
+
+        if (tree == null || tree.data == null || value == null)
+        {
+            return false;
+        }
 
         if (tree.data.data == value.data)
         {
@@ -272,6 +309,9 @@ class Program
     static int Size(Tree tree)
     {
         //  Fill in proper code 
+
+        // get root node of the tree, then search it. and count how many
+
 
         return 0;
     }
@@ -461,18 +501,10 @@ static void Main()
 
         SetTests();
 
-
-        DataEntry data1 = new DataEntry();
-        data1.data = 4;
-
-        Console.WriteLine($"the value of {nameof(data1)} is {data1.data}");
-
         Tree theTree = new Tree();
-        theTree.root.data.data = 5;
 
-        Node node1 = new Node();
-        
-        Console.WriteLine($"the value of {nameof(theTree)} is {theTree.root.data.data}");
+
+        Console.WriteLine($"The count of nodes in a tree are{CountNodes(theTree.root)}");
 
     }
 
